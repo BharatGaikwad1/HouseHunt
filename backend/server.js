@@ -67,15 +67,18 @@ app.use('/api/auth', authLimiter, authRoutes);
 app.use('/api/properties', propertyRoutes);
 app.use('/api/bookings', bookingRoutes);
 
-// Health check endpoint
-app.get('/api/health', (req, res) => {
+// Health check endpoints
+const healthCheck = (req, res) => {
   const dbConnected = mongoose.connection.readyState === 1;
   res.status(dbConnected ? 200 : 503).json({
     status: dbConnected ? 'healthy' : 'unhealthy',
     database: dbConnected ? 'connected' : 'disconnected',
     timestamp: new Date()
   });
-});
+};
+
+app.get('/health', healthCheck);
+app.get('/api/health', healthCheck);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
