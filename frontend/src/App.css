@@ -1,0 +1,91 @@
+/* ===== HouseHunt Application Styles ===== */
+
+/* Primary-light background utility */
+.bg-primary-light {
+  background-color: hsl(var(--primary-hue, 245), 85%, 95%);
+}
+
+/* Text truncation helpers */
+.text-truncate-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Custom position offsets */
+.top-3 {
+  top: 12px;
+}
+.start-3 {
+  left: 12px;
+}
+.bottom-3 {
+  bottom: 12px;
+}
+.end-3 {
+  right: 12px;
+}
+
+/* Font weight extra-bold */
+.fw-extrabold {
+  font-weight: 800;
+}
+
+/* Small text utilities */
+.fs-7 {
+  font-size: 0.85rem;
+}
+.fs-8 {
+  font-size: 0.75rem;
+}
+
+/* Max-width utility */
+.max-w-600 {
+  max-width: 600px;
+}
+
+/* Z-index utilities */
+.z-index-2 {
+  z-index: 2;
+  position: relative;
+}
+
+/* Dashed border utility */
+.border-dashed {
+  border-style: dashed !important;
+}
+
+/* Sticky card in sidebar */
+.position-sticky {
+  position: sticky !important;
+}
+
+/* Smooth image hover zoom */
+.glass-card:hover img {
+  transform: scale(1.03);
+}
+
+/* Table styling refinements */
+.table th {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  font-weight: 700;
+  border-bottom-width: 2px;
+}
+
+/* Dropdown menu premium styling */
+.dropdown-menu {
+  border-radius: 12px;
+}
+
+.dropdown-item {
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.dropdown-item:hover {
+  background-color: var(--gray-100, #f1f5f9);
+}
